@@ -1,0 +1,27 @@
+<p>Nombre del Emplado: {{nombre}}</p>
+
+<p>Nombre del Apellido: {{apellido}}</p>
+
+<p>Edad: Tiene {{edad}} años y es {{edad < 18 ? "Menor de edad" : "Mayor de edad"}}</p>
+
+<p>Direccion: {{direccion}}</p>
+
+Introduce la dirección <input type="text" (input)="cambiaDireccion($event)"><br>
+
+<p>Nombre de la Empresa: {{empresa.value}}</p>
+
+Introduce la empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+
+<p>Nacionalidad: {{nacionalidad}}</p>
+
+Introduce la nacionaliad <input type="text" [(ngModel)]="nacionalidad"><br><br>
+
+
+
+{{textoDeRegistro}}<br>
+
+Registrado: <input type="radio" value="si" name="nRegistro" id="registro" [checked]="usuarioRegistrado" (click)="setUsuarioRegistrado($event)"> <br>
+No Registrado: <input type="radio" value="no" name="nRegistro" (click)="setUsuarioRegistrado($event)">
+
+{{geRegistroUsuario()}}
